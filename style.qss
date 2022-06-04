@@ -1,0 +1,43 @@
+QMainWindow{
+    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #68e1ff, stop:1 #e2f8ff)
+}
+
+#TitleLabel{
+    color:#ffe14c
+}
+
+#SixClasButton, #JDClasButton{
+    font: 10pt "Arial Rounded MT Bold";
+    border: 3px solid white;
+    border-radius:20px;
+    background-color:#ccf4ff;
+}
+
+
+#SixClasButton:hover,#JDClasButton:hover{
+    border: 1px solid white;
+    background-color:#ffe14c;
+}
+
+#HaruluyaLabel{
+    border-radius:10px;
+    border:3px solid #42d1fa;
+}
+
+#AuthLabel{
+    background-color: transparent;
+    border:none;
+}
+
+#DocumentLink,#AboutAuthLink{
+    background-color: transparent;
+    border:none;
+}
+
+#DocumentLink:hover,#AboutAuthLink:hover{
+    color:blue;
+    border:3px solid white;
+    background-color:#ffe14c;
+    border-radius:20px;
+}
+

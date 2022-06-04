@@ -1,0 +1,27 @@
+QDialog{
+    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #68e1ff, stop:1 #e2f8ff)
+}
+
+#forcastLabel{
+    color:#ec7259
+}
+
+#TitleLabel{
+    color:#ffe14c
+}
+
+#fileLinkButton, #vedioButton{
+    border: 3px solid white;
+    border-radius:20px;
+    background-color:#ccf4ff;
+}
+
+#fileLinkButton:hover, #vedioButton:hover{
+    background-color:#ffe14c;
+}
+
+#fileNameLabel[showBorder="true"]{
+    border: 3px solid white;
+    border-radius:20px;
+    background-color:#ccf4ff;
+}
