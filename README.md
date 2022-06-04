@@ -16,6 +16,10 @@
 
 杰西是游戏《最终幻想7：重制版》中的重要角色，是雪崩的炸药专家，负责赚钱的重要成员。
 
+**Function**
+
+本项目基于WaveNet完成对部分方言种类的分类。
+
 #### Presentation
 
 ![show](./images/show.png)
