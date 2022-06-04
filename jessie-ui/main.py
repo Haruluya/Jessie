@@ -18,6 +18,7 @@ class MainWindow(QMainWindow):
         self.ui = DialectsClassificationView.Ui_MainWindow()
         self.ui.setupUi(self)
         self.ForcastDialog = ForcastDialog()
+        self.setWindowFlags(Qt.FramelessWindowHint)
 
     @QtCore.pyqtSlot()
     def on_SixClasButton_clicked(self):
@@ -77,6 +78,8 @@ class MainWindow(QMainWindow):
                                      QRect(target.x() - 5, target.y() - 5, target.width() + 10, target.height() + 10))
         self.animation.setEndValue(QRect(target.x(), target.y(), target.width(), target.height()))
         self.animation.start()
+        self.close()
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

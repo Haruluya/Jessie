@@ -1,5 +1,7 @@
 QDialog{
-    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #68e1ff, stop:1 #e2f8ff)
+    background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #68e1ff, stop:1 #e2f8ff);
+    border: 8px solid white;
+    border-radius:20px;
 }
 
 #forcastLabel{

@@ -137,4 +137,4 @@ class Ui_MainWindow(object):
         self.DocumentLink.setText(_translate("MainWindow", "项目文档"))
         self.JDClasButton.setText(_translate("MainWindow", "胶东三分类"))
         self.AuthLabel.setText(_translate("MainWindow", "<font color=\"#ffe14c\">Auth:haruluya</font>"))
-        self.AboutAuthLink.setText(_translate("MainWindow", "关于作者"))
+        self.AboutAuthLink.setText(_translate("MainWindow", "退出"))

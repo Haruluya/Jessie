@@ -7,7 +7,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtWidgets import *
 from qtpy import QtWidgets
-
+from loadModel import *
 import ForcastDialogView
 
 
@@ -16,6 +16,8 @@ class ForcastDialog(QDialog):
         super(QDialog,self).__init__(parent)
         self.ui = ForcastDialogView.Ui_ForCastDialogView()
         self.ui.setupUi(self)
+        self.setWindowFlags(Qt.FramelessWindowHint)
+
 
     @QtCore.pyqtSlot()
     def on_fileLinkButton_clicked(self):
@@ -30,13 +32,17 @@ class ForcastDialog(QDialog):
         self.animation.start()
         fileName, fileType = QtWidgets.QFileDialog.getOpenFileName(self, "选取方言语音文件", os.getcwd(),
                                                     "All Files(*);;Text Files(*.wav)")
-        self.vedioFileName = fileName
-        self.ui.fileNameLabel.setText(fileName.split('/')[-1])
-        self.ui.fileNameLabel.showBorder = "true"
+        if (fileName):
+            self.vedioFileName = fileName
+            self.ui.fileNameLabel.setText(fileName.split('/')[-1])
+            self.ui.fileNameLabel.showBorder = "true"
+            self.ui.forcastLabel.setText(predict(fileName))
 
     @QtCore.pyqtSlot()
     def on_vedioButton_clicked(self):
         if (self.vedioFileName):
+            print(self.vedioFileName)
+            pcm_to_wav(self.vedioFileName,"vedio.wav")
             playsound(self.vedioFileName)
 
 
