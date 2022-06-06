@@ -135,6 +135,6 @@ class Ui_MainWindow(object):
         self.TitleLabel.setText(_translate("MainWindow", "<html><head/><body><p>DtsClassification</p></body></html>"))
         self.SixClasButton.setText(_translate("MainWindow", "六分类"))
         self.DocumentLink.setText(_translate("MainWindow", "项目文档"))
-        self.JDClasButton.setText(_translate("MainWindow", "胶东三分类"))
+        self.JDClasButton.setText(_translate("MainWindow", "胶东四分类"))
         self.AuthLabel.setText(_translate("MainWindow", "<font color=\"#ffe14c\">Auth:haruluya</font>"))
         self.AboutAuthLink.setText(_translate("MainWindow", "退出"))

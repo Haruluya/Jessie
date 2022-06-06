@@ -17,7 +17,6 @@ class MainWindow(QMainWindow):
         super(QMainWindow, self).__init__(parent)
         self.ui = DialectsClassificationView.Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ForcastDialog = ForcastDialog()
         self.setWindowFlags(Qt.FramelessWindowHint)
 
     @QtCore.pyqtSlot()
@@ -31,7 +30,8 @@ class MainWindow(QMainWindow):
                                      QRect(target.x() - 5, target.y() - 5, target.width() + 10, target.height() + 10))
         self.animation.setEndValue(QRect(target.x(), target.y(), target.width(), target.height()))
         self.animation.start()
-        self.showWay = 'SixClas'
+        self.ForcastDialog = ForcastDialog(type='SixClas')
+        self.ForcastDialog.setStyleSheet(forcastDialogQssStyle)
         self.ForcastDialog.show()
         self.ForcastDialog.move(1200,200)
 
@@ -46,7 +46,10 @@ class MainWindow(QMainWindow):
                                      QRect(target.x() - 5, target.y() - 5, target.width() + 10, target.height() + 10))
         self.animation.setEndValue(QRect(target.x(), target.y(), target.width(), target.height()))
         self.animation.start()
-        self.showWay = 'JDClas'
+        self.ForcastDialog = ForcastDialog(type='JDClas')
+        self.ForcastDialog.setStyleSheet(forcastDialogQssStyle)
+        self.ForcastDialog.show()
+        self.ForcastDialog.move(1200,200)
 
 
     @QtCore.pyqtSlot()
@@ -94,6 +97,5 @@ if __name__ == '__main__':
     # 初始化窗口。
     mainWindow = MainWindow()
     mainWindow.setStyleSheet(qssStyle)
-    mainWindow.ForcastDialog.setStyleSheet(forcastDialogQssStyle)
     mainWindow.show()
     sys.exit(app.exec_())

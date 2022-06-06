@@ -12,11 +12,12 @@ import ForcastDialogView
 
 
 class ForcastDialog(QDialog):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None,type=None):
         super(QDialog,self).__init__(parent)
         self.ui = ForcastDialogView.Ui_ForCastDialogView()
         self.ui.setupUi(self)
         self.setWindowFlags(Qt.FramelessWindowHint)
+        self.type = type
 
 
     @QtCore.pyqtSlot()
@@ -36,7 +37,7 @@ class ForcastDialog(QDialog):
             self.vedioFileName = fileName
             self.ui.fileNameLabel.setText(fileName.split('/')[-1])
             self.ui.fileNameLabel.showBorder = "true"
-            self.ui.forcastLabel.setText(predict(fileName))
+            self.ui.forcastLabel.setText(predict(fileName,self.type))
 
     @QtCore.pyqtSlot()
     def on_vedioButton_clicked(self):
